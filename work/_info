@@ -1,0 +1,249 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pichau/Documents/SIstemasDigitais/TP6
+Earbitro
+Z1 w1607199220
+Z2 DPx4 work 5 p_arb 0 22 1^5]zO8Niaaoo>jSLCng92
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z7 8arbitro_tp6.vhd
+Z8 Farbitro_tp6.vhd
+l0
+L12
+V2ZTnW>@DICob<K39GJXiJ0
+!s100 eA]50YIm<Rmgcma5C[_RW1
+Z9 OP;C;10.4a;61
+32
+Z10 !s110 1607285263
+!i10b 1
+Z11 !s108 1607285263.000000
+Z12 !s90 -reportprogress|300|-work|work|arbitro_tp6.vhd|
+Z13 !s107 arbitro_tp6.vhd|
+!i113 1
+Z14 o-work work -O0
+Z15 tExplicit 1
+Aarbitro
+R2
+R3
+R4
+R5
+R6
+Z16 DEx4 work 7 arbitro 0 22 2ZTnW>@DICob<K39GJXiJ0
+l25
+L21
+V193X2>BTQ29_nUf9AGQ6N3
+!s100 L[JZi]CZXYVCha_h`Fej]3
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Pp_arb
+R5
+R6
+w1606476999
+R0
+8pkg_tp6.vhd
+Fpkg_tp6.vhd
+l0
+L10
+V1^5]zO8Niaaoo>jSLCng92
+!s100 ja?@AJOZYz8M:E8Bl@he40
+R9
+32
+R10
+!i10b 1
+R11
+!s90 -reportprogress|300|-work|work|pkg_tp6.vhd|
+!s107 pkg_tp6.vhd|
+!i113 1
+R14
+R15
+Ereceptor
+Z17 w1607203288
+R5
+R6
+R0
+Z18 8receptor.vhd
+Z19 Freceptor.vhd
+l0
+L10
+VoJ4l@0aJb5I27_[G][EX?0
+!s100 jO2K`iYf7f;Bjbm=;EH5R2
+R9
+32
+R10
+!i10b 1
+R11
+Z20 !s90 -reportprogress|300|-work|work|receptor.vhd|
+Z21 !s107 receptor.vhd|
+!i113 1
+R14
+R15
+Areceptor
+R5
+R6
+Z22 DEx4 work 8 receptor 0 22 oJ4l@0aJb5I27_[G][EX?0
+l26
+L21
+V_HQ_Ua<V?8R=5>[4LLSR33
+!s100 ^254z3NI;XR>E0Z[d>K5h2
+R9
+32
+R10
+!i10b 1
+R11
+R20
+R21
+!i113 1
+R14
+R15
+Etb
+Z23 w1606477619
+R2
+R3
+R5
+R6
+R0
+Z24 8tb.vhd
+Z25 Ftb.vhd
+l0
+L12
+Vk:c75c=@zQIJ4Z36PCF?e3
+!s100 B`K@_J8MiP^gN5P1U8nn83
+R9
+32
+Z26 !s110 1607285264
+!i10b 1
+Z27 !s108 1607285264.000000
+Z28 !s90 -reportprogress|300|-work|work|tb.vhd|
+Z29 !s107 tb.vhd|
+!i113 1
+R14
+R15
+Atb
+R22
+Z30 DEx4 work 13 transmissores 0 22 Pkj?fa7iFHG9_m=`<45973
+R2
+R3
+R5
+R6
+DEx4 work 2 tb 0 22 k:c75c=@zQIJ4Z36PCF?e3
+l42
+L18
+V_QWN7Eof2KUJ>1_GYMT?11
+!s100 _3b8J]8G9;iJ^b7e1Wj1P0
+R9
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R14
+R15
+Etransmissores
+Z31 w1607202811
+R2
+R3
+R5
+R6
+R0
+Z32 8transmissores.vhd
+Z33 Ftransmissores.vhd
+l0
+L12
+VPkj?fa7iFHG9_m=`<45973
+!s100 `R`jf1P4Y7Y@InL2V?aR82
+R9
+32
+R10
+!i10b 1
+R11
+Z34 !s90 -reportprogress|300|-work|work|transmissores.vhd|
+Z35 !s107 transmissores.vhd|
+!i113 1
+R14
+R15
+Atransmissores
+R16
+R4
+Z36 DEx4 work 2 tx 0 22 MB;^NX<1YlabOVBSIAf`C3
+R2
+R3
+R5
+R6
+R30
+l26
+L24
+VjI@QE;@o4fOfTFn`U_K_F0
+!s100 kzIQz?<lUkB0z9E4LV9<l2
+R9
+32
+R10
+!i10b 1
+R11
+R34
+R35
+!i113 1
+R14
+R15
+Etx
+Z37 w1607285216
+R3
+R4
+R5
+R6
+R0
+Z38 8tx_tp6.vhd
+Z39 Ftx_tp6.vhd
+l0
+L9
+VMB;^NX<1YlabOVBSIAf`C3
+!s100 iO05kgeX3ie^3io7l;=2z3
+R9
+32
+R10
+!i10b 1
+R11
+Z40 !s90 -reportprogress|300|-work|work|tx_tp6.vhd|
+Z41 !s107 tx_tp6.vhd|
+!i113 1
+R14
+R15
+Atransmissor
+R3
+R4
+R5
+R6
+R36
+l30
+L24
+Vg1^bgmTWWbmcgP8;oc`Td2
+!s100 332^gLXV5TaXPe^ORC0H31
+R9
+32
+R10
+!i10b 1
+R11
+R40
+R41
+!i113 1
+R14
+R15
