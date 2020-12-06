@@ -10,8 +10,8 @@ use IEEE.std_logic_1164.all;
 entity receptor is
   port( clock, reset, linha : in std_logic;
         release : out std_logic;
-        palavra : std_logic_vector(7 downto 0);
-        endereco : std_logic_vector(1 downto 0)
+        palavra : out std_logic_vector(7 downto 0);
+        endereco : out std_logic_vector(1 downto 0)
       );
 end entity;
 
@@ -21,23 +21,21 @@ end entity;
 architecture receptor of receptor is
   type states is (SWAIT, A0, A1, S0, S1, S2, S3, S4, S5, S6, S7, SRELEASE);
   signal EA, PE : states;
-  signal spalavra : std_logic_vector(7 downto 0);
-  signal sendereco :  std_logic_vector(1 downto 0);
+  -- Definir o valor inicial dos vetores como 0
+  signal spalavra : std_logic_vector(7 downto 0) := x"00";
+  signal sendereco :  std_logic_vector(1 downto 0) := "00";
 begin
 
   process(clock, reset)
     begin
       if reset = '1' then 
         EA <= SWAIT;
-        spalavra <= (others => '0');
-        sendereco <= (others => '0');
       elsif rising_edge(clock) then
         EA <= PE;
       end if;
     end process;
     
-  spalavra <= palavra;
-  sendereco <= endereco;
+
   release <= '1' when EA = SRELEASE else '0';
 
   process(EA, linha)
@@ -48,6 +46,8 @@ begin
           PE <= A0;
         else
           PE <= SWAIT;
+          palavra <= spalavra;
+          endereco <= sendereco;
         end if;
 
       when A0 => PE <= A1; sendereco(0) <= linha;

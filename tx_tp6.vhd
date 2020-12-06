@@ -36,60 +36,59 @@ begin
             end if;
         end process;
 
-process(EA, send, grant)
-    begin
-        case EA is
+  process(EA, send, grant)
+  begin
+    case EA is
+      when SWAIT =>  
+        if send='1' then 
+          PE <= SREQ; 
+        else PE <= SWAIT; 
+        end if;
 
-            when SWAIT =>  
-              if send='1' then 
-                PE <= SREQ; 
-              else PE <= SWAIT; 
-              end if;
+      when SREQ => 
+        if grant = '1' then
+          PE <= SSTART;
+        else
+          PE <= SREQ;
+        end if;
 
-            when SREQ => 
-              if grant = '1' then
-                PE <= SSTART;
-              else
-                PE <= SREQ;
-              end if;
+      when SSTART =>   PE <= A0;
 
-            when SSTART =>   PE <= A0;
+      when A0 => PE <= A1;
+      when A1 => PE <= S0;
 
-            when A0 => PE <= A1;
-            when A1 => PE <= S0;
-
-            when S0 =>   PE <= S1;
-            when S1 =>   PE <= S2;
-            when S2 =>   PE <= S3;
-            when S3 =>   PE <= S4;
-            when S4 =>   PE <= S5;
-            when S5 =>   PE <= S6;
-            when S6 =>   PE <= S7;
-            when S7 =>   PE <= SSTOP;
+      when S0 =>   PE <= S1;
+      when S1 =>   PE <= S2;
+      when S2 =>   PE <= S3;
+      when S3 =>   PE <= S4;
+      when S4 =>   PE <= S5;
+      when S5 =>   PE <= S6;
+      when S6 =>   PE <= S7;
+      when S7 =>   PE <= SSTOP;
             
-            when SSTOP  =>   PE <= SWAIT;
-        end case;  
-    end process;
+        when SSTOP  =>   PE <= SWAIT;
+    end case;  
+  end process;
 
-req <= '1' when EA = SREQ else '0';
+  req <= '1' when EA = SREQ else '0';
     
-busy <= '0' when EA = SWAIT else '1';
+  busy <= '0' when EA = SWAIT else '1';
 
-linha <= 
+  linha <= 
 
-  address(0)    when EA=A0 else
-  address(1)    when EA=A0 else
+    address(0)    when EA=A0 else
+    address(1)    when EA=A1 else
 
-  palavra(7)    when EA=S7 else
-  palavra(6)    when EA=S6 else
-  palavra(5)    when EA=S5 else
-  palavra(4)    when EA=S4 else
-  palavra(3)    when EA=S3 else
-  palavra(2)    when EA=S2 else
-  palavra(1)    when EA=S1 else
-  palavra(0)    when EA=S0 else
+    palavra(0)    when EA=S0 else
+    palavra(1)    when EA=S1 else
+    palavra(2)    when EA=S2 else
+    palavra(3)    when EA=S3 else
+    palavra(4)    when EA=S4 else
+    palavra(5)    when EA=S5 else
+    palavra(6)    when EA=S6 else
+    palavra(7)    when EA=S7 else
 
-  '0' when EA = SSTART or EA = SSTOP else 
-  'H';
+    '0' when EA = SSTART or EA = SSTOP else 
+    'H';
      
 end transmissor;
